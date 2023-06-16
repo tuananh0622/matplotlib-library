@@ -1,0 +1,17 @@
+# import the cycler library
+from matplotlib import cycler
+# set the sequence colors ranging from [Red, Blue, Purple, Yellow, Green, Pink]
+colors = cycler('color',['#EE6666','#3388BB','#9988DD','#EECC55','#88BB44','#FFBBBB'])
+# set up the axes including: background color(#E6E6E6), edge color(red), in front of the grid(True), color in sequence(colors)
+plt.rc('axes',facecolor='#E6E6E6',edgecolor='r',axisbelow=True,grid=True,prop_cycle=colors)
+# set up the grid: color: white, linestyle is solid
+plt.rc('grid',color='w',linestyle='solid')
+# set up xticks: ticks are out of frame(out), x-ticks color: gray
+plt.rc('xtick',direction='out',color='gray')
+# set up yticks: ticks are out of frame(out), y-ticks color: gray
+plt.rc('ytick',direction='out',color='gray')
+# set up patch: the edgecolor of each bins in a histogram
+plt.rc('patch',edgecolor='r')
+# set up lines: the width of lines in each plot is 2
+plt.rc('lines',linewidth=2)
+plt.hist(x);
